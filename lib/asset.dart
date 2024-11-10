@@ -5,3 +5,7 @@ abstract class AssetIcon {
   static const close = 'assets/icons/close_icon.svg';
   
 }
+
+abstract class MyAssetImage{
+  static const partyImage = 'assets/images/party_image.png';
+}

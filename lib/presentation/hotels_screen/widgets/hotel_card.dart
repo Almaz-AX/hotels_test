@@ -7,7 +7,6 @@ import '../../../injection_container.dart';
 import '../../../models/hotel/hotel.dart';
 import '../../rooms_screen/bloc/rooms_bloc.dart';
 import '../../rooms_screen/rooms_screen.dart';
-import '../../widgets/custom_button.dart';
 import 'hotel_card_description.dart';
 import 'hotel_card_title.dart';
 
@@ -28,9 +27,9 @@ class HotelCard extends StatelessWidget {
           height: 16,
         ),
         DecoratedContainer(
-          child: CustomButton(
-            title: 'К выбору номера',
-            onTap: () {
+          child: ElevatedButton(
+            child: const Text('К выбору номера'),
+            onPressed: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(

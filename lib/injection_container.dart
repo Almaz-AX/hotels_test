@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:hostels/presentation/hotels_screen/bloc/hotels_bloc.dart';
 import 'package:hostels/repository/hotel_rest_client.dart';
 
+import 'presentation/reservation_screen/bloc/reservation_bloc.dart';
 import 'presentation/rooms_screen/bloc/rooms_bloc.dart';
 
 final getIt = GetIt.instance;
@@ -16,6 +17,8 @@ Future<void> init() async {
   //rooms_screen
   getIt.registerFactory(() => RoomsBloc(client:getIt()));
 
+  //resevation_screen
+  getIt.registerFactory(() => ReservationBloc(client:getIt()));
 
 
   //repository

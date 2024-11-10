@@ -1,10 +1,13 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:hostels/presentation/widgets/custom_button.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hostels/injection_container.dart';
 import 'package:hostels/presentation/widgets/image_carusel.dart';
 import 'package:hostels/presentation/widgets/pecularities.dart';
 
 import '../../../models/room/room.dart';
+import '../../reservation_screen/bloc/reservation_bloc.dart';
+import '../../reservation_screen/reservation_screen.dart';
 import '../../widgets/decorated_container.dart';
 
 class RoomCard extends StatelessWidget {
@@ -59,7 +62,17 @@ class RoomCard extends StatelessWidget {
                 ])),
             SizedBox(
                 width: double.infinity,
-                child: CustomButton(onTap: () {}, title: 'Выбрать номер'))
+                child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) =>
+                        BlocProvider(
+                          create: (context) => getIt<ReservationBloc>()..add(ReservationEvent.getReservation(room.id)),
+                          child: const ReservatonScreen(),
+                        )
+                      ));
+                    },
+                    child: const Text('Выбрать номер')))
           ],
         ),
       ),

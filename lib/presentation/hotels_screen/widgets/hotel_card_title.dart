@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:hostels/presentation/widgets/image_carusel.dart';
-import 'package:hostels/presentation/hotels_screen/widgets/rating.dart';
+import 'package:hostels/presentation/widgets/rating.dart';
 
 import '../../../models/hotel/hotel.dart';
 import '../../widgets/decorated_container.dart';

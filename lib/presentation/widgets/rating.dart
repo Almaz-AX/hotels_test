@@ -25,7 +25,7 @@ class RatingWidget extends StatelessWidget {
       backgroundColor = Colors.grey[300];
     }
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5), color: backgroundColor),
       child: Wrap(

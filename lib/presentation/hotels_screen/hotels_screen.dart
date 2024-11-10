@@ -6,6 +6,7 @@ import 'widgets/hotel_card.dart';
 class HotelsScreen extends StatelessWidget {
   const HotelsScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

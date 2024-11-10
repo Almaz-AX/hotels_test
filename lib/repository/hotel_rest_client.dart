@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:hostels/models/reservation/reservation.dart';
 import 'package:hostels/models/room/room.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -15,4 +16,7 @@ abstract class HotelRestClient {
 
   @GET('/rooms')
   Future<List<Room>> getRooms();
+
+   @GET('/reservations')
+  Future<List<Reservation>> getReservations();
 }
